@@ -1,0 +1,375 @@
+:root {
+  --max-width  : 1200px;
+  --background : #FAFAFA;
+  --color      : #000000;
+  --color_hover: #FF822E;
+
+  --time_hover: 0.5s;
+  --time_scale: 1s;
+
+  --icon_heigth: 24px;
+  --icon_width : 24px;
+
+  --big-icon_heigth: 36px;
+  --big-icon_width : 36px;
+  --small-icon_heigth: 12px;
+  --small-icon_width : 12px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.col_container {
+  display        : flex;
+  flex-direction : column;
+  justify-content: center;
+  align-items    : center;
+}
+
+.row_container {
+  display        : flex;
+  flex-direction : row;
+  justify-content: center;
+  align-items    : center;
+}
+
+.icon {
+  height: var(--icon_heigth);
+  width : var(--icon_width);
+
+  padding: 0% 2% 0% 0%;
+}
+
+.big-icon {
+  height: var(--big-icon_heigth);
+  width : var(--big-icon_width);
+
+  padding: 0% 2% 0% 0%;
+}
+
+.small-icon {
+  height: var(--small-icon_heigth);
+  width : var(--small-icon_width);
+
+  padding: 0% 2% 0% 0%;
+}
+
+body {
+  width    : 100%;
+  max-width: var(--max-width);
+
+  margin: 0 auto;
+
+  background: var(--background);
+}
+
+a {
+  text-decoration: none;
+  color          : var(--color);
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+header {
+  height: 100vh;
+  width : 100%;
+
+  display        : flex;
+  flex-direction : column;
+  justify-content: space-between;
+  align-items    : center;
+
+  background: var(--background);
+
+  transition: var(--time_scale);
+  transform : rotateX(90deg);
+}
+
+header nav {
+  display        : flex;
+  flex-direction : row;
+  justify-content: space-around;
+  align-items    : center;
+
+  height: 20vh;
+  width : 100%;
+}
+
+header ul {
+  display        : flex;
+  flex-direction : row;
+  justify-content: space-around;
+  align-items    : center;
+
+  width: 100%;
+
+  margin : 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+header li {
+  position: relative;
+
+  padding: 1% 2%;
+
+  text-align: center;
+}
+
+header li:hover {
+  cursor: pointer;
+}
+
+header li:after {
+  content         : "";
+  position        : absolute;
+  bottom          : -5px;
+  left            : 0;
+  width           : 0%;
+  height          : 1px;
+  background-color: var(--color_hover);
+  transition      : var(--time_hover);
+}
+
+header li:hover:after {
+  width: 100%;
+}
+
+header a {
+  text-transform: uppercase;
+}
+
+.header_container {
+  display        : flex;
+  flex-direction : row;
+  justify-content: space-around;
+  align-items    : center;
+
+  height: 80vh;
+  width : 100%;
+
+  overflow: hidden;
+}
+
+.header_container figure {
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+
+  height: 50vh;
+  width : 40vw;
+
+  margin : 0;
+  padding: 0 5%;
+}
+
+.header_foto {
+  height: 100%;
+}
+
+.header_info {
+  position       : relative;
+  display        : flex;
+  flex-direction : column;
+  justify-content: flex-start;
+  align-items    : flex-start;
+
+  height: 50vh;
+  width : 40vw;
+
+  padding: 0 5%;
+
+  overflow: hidden;
+
+  transition: var(--time_scale);
+}
+
+.header_info:after {
+  content         : "";
+  position        : absolute;
+  top             : 0px;
+  left            : 0px;
+  width           : 1px;
+  height          : 0%;
+  background-color: var(--color_hover);
+  transition      : var(--time_hover);
+}
+
+.header_info-anim:after {
+  height: 100%;
+}
+
+h1 {
+  position: relative;
+  margin  : 1em 0;
+
+  transform : translateX(-150%);
+  transition: var(--time_hover);
+}
+
+.info_item {
+  display        : flex;
+  flex-direction : row;
+  justify-content: flex-start;
+  align-items    : center;
+
+  width: 100%;
+
+  padding: 0.5em 0;
+
+  transform : translateX(-150%);
+  transition: var(--time_hover);
+}
+
+.header_container .header_info a {
+  font-size: 24px;
+}
+
+main {
+  display        : flex;
+  flex-direction : column;
+  justify-content: center;
+  align-items    : center;
+}
+
+main section {
+  width: 100%;
+}
+
+main h2 {
+  font-size: 2em;
+}
+
+.header_image {
+  display        : flex;
+  flex-direction : row;
+  justify-content: flex-start;
+  align-items    : center;
+
+  width: 100%;
+
+  padding: 0% 0% 0% 30%;
+}
+
+main .container_experience,
+main .container_education,
+main .container_skill {
+  display        : flex;
+  flex-direction : row;
+  justify-content: space-between;
+  align-items    : flex-start;
+
+  margin: 1% 0%;
+}
+
+main .container_company {
+  display        : flex;
+  flex-direction : column;
+  justify-content: flex-start;
+  align-items    : flex-end;
+
+  width: 25%;
+
+  padding: 0% 5% 0% 0%;
+}
+
+main .container_company h3 {
+  font-size: 1.5em;
+}
+
+main .container_company h3,
+main .container_company p {
+  margin: 1% 0%;
+}
+
+main ul {
+  position:relative;
+
+  width: 75%;
+
+  margin: 0;
+}
+
+main ul.side-line:after {
+  content         : "";
+  position        : absolute;
+  top             : 0px;
+  left            : 0px;
+  width           : 1px;
+  height          : 100%;
+  background-color: var(--color_hover);
+  transition      : var(--time_hover);
+}
+
+main li {
+  position: relative;
+
+  padding: 1% 2%;
+
+  list-style-type: none;
+
+  transition: var(--time_hover);
+}
+
+main li a,
+main p,
+main label {
+  font-size: 1.2em;
+
+  transition: var(--time_hover);
+}
+
+main li:hover {
+  cursor: pointer;
+}
+
+main li:hover a {
+  color: var(--color_hover);
+}
+
+.container_skill .skill_item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.skill_item label {
+  padding: 0% 5%;
+}
+
+.skill_item .skill_text {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;;
+  align-items: center;
+
+  width: 40%;
+}
+
+.skill_item .skill_image {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  width: 60%;
+}
+
+footer {
+  height: 40vh;
+  width : 100%;
+
+  display        : flex;
+  flex-direction : row;
+  justify-content: space-around;
+  align-items    : center;
+}
